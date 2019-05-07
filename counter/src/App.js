@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent } from '*.svg';
+// import { ReactComponent } from '*.svg';
 
 const Header = () => {
   return(
@@ -9,7 +9,7 @@ const Header = () => {
   );
 };
 
-class Content extends ReactComponent {
+class Content extends React.Component {
   constructor(props){
     super(props);
 
@@ -20,13 +20,13 @@ class Content extends ReactComponent {
 
   handleClickMinus = e => {
     e.preventDefault();
-    let counter = this.state.counter--;
+    let counter = this.state.counter - 1;
 
     this.setState({counter});
   }
   handleClickPlus = el => {
     el.preventDefault();
-    let counter = this.state.counter++;
+    let counter = this.state.counter + 1;
 
     this.setState({counter});
   }
@@ -42,7 +42,7 @@ class Content extends ReactComponent {
   }
 }
 
-class App extends ReactComponent {
+class App extends React.Component {
   render(){
     return (
       <React.Fragment>
