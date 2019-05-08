@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
+import App from './app2.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 class Incrementer extends React.Component {
